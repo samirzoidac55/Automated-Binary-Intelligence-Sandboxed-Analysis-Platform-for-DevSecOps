@@ -1,8 +1,48 @@
 # Automated Binary Intelligence Sandboxed Analysis Platform for DevSecOps
 
-This platform provides automated binary intelligence and sandboxed analysis for DevSecOps workflows.
+## Objective
+This platform provides automated binary intelligence and sandboxed analysis for DevSecOps workflows by receiving executable artifacts, performing static analysis, and returning structured JSON reports.
 
-## Features (To be implemented)
-- Automated Binary Analysis
-- Sandboxed Execution Environment
-- DevSecOps Integration
+## Architecture
+- **API:** FastAPI
+- **Worker:** Celery
+- **Broker:** Redis
+- **Database:** PostgreSQL
+
+## Phase 1 Scope
+- Secure file upload API
+- Asynchronous task processing
+- Static analysis: File type ID, PE/ELF metadata, YARA/capa integration
+- Persistence in PostgreSQL
+
+## Prerequisites
+- Docker
+- Docker Compose
+
+## How to start with Docker Compose
+```bash
+docker-compose up --build
+```
+
+## How to submit a file
+```bash
+curl -X POST -F "file=@/path/to/executable" http://localhost:8000/api/v1/analyze
+```
+
+## How to retrieve results
+```bash
+curl http://localhost:8000/api/v1/analysis/{analysis_id}
+```
+
+## Security Considerations
+- No execution of binaries.
+- No host filesystem mounts.
+- Filesystem isolation via Docker volumes.
+- Non-root containers.
+
+## Future Phases
+- Phase 2: Threat Intelligence / IOC enrichment
+- Phase 3: Risk engine / security policy
+- Phase 4: Dynamic sandbox
+- Phase 5: Sandbox-detection resistance
+- Phase 6: CI/CD integration and dashboard
