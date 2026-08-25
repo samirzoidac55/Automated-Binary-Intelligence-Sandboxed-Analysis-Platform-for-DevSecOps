@@ -47,8 +47,3 @@ curl http://localhost:8000/api/v1/analysis/{analysis_id}
 - Filesystem isolation via Docker volumes.
 - Non-root containers.
 
-## Future Phases
-- Phase 3: Risk engine / security policy
-- Phase 4: Dynamic sandbox
-- Phase 5: Sandbox-detection resistance
-- Phase 6: CI/CD integration and dashboard
