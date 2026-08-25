@@ -11,6 +11,6 @@ python-magic==0.4.27
 pefile==2023.2.7
 pyelftools==0.29
 yara-python==4.3.1
-capa==6.1.0
+capa
 pytest==7.4.2
 httpx==0.25.0

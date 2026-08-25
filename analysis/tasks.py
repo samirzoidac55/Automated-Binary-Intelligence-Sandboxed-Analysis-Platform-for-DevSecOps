@@ -1,6 +1,7 @@
 from shared.celery_app import celery_app
 from shared.models import SessionLocal, Analysis, AnalysisResult, JobStatus
 from analysis.engine import static_analysis_engine
+from analysis.enrichment import enrich_analysis
 import os
 import logging
 
@@ -23,10 +24,15 @@ def static_analysis(analysis_id: str, file_path: str):
         file_type = db_analysis.artifact.file_type
         results = static_analysis_engine(file_path, file_type)
         
+        # Perform enrichment
+        sha256 = results.get("sha256")
+        threat_intel = enrich_analysis(sha256)
+        
         # Save results
         db_result = AnalysisResult(
             analysis_id=analysis_id,
-            results=results
+            results=results,
+            threat_intel=threat_intel
         )
         db.add(db_result)
         

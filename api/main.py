@@ -77,6 +77,7 @@ def get_analysis(analysis_id: str, db: Session = Depends(get_db)):
             "file_type": db_analysis.artifact.file_type
         },
         "static_analysis": db_result.results if db_result else {},
+        "threat_intel": db_result.threat_intel if db_result else None,
         "status": db_analysis.status,
         "created_at": db_analysis.created_at
     }

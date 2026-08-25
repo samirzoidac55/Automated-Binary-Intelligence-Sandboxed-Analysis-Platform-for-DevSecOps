@@ -23,5 +23,6 @@ class AnalysisResultSchema(BaseModel):
     analysis_id: str
     artifact: ArtifactBase
     static_analysis: Dict[str, Any]
+    threat_intel: Optional[Dict[str, Any]] = None
     status: JobStatus
     created_at: datetime

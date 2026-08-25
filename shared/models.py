@@ -48,6 +48,7 @@ class AnalysisResult(Base):
     id = Column(Integer, primary_key=True, index=True)
     analysis_id = Column(String, ForeignKey("analyses.id"), nullable=False)
     results = Column(JSON)  # The structured JSON report
+    threat_intel = Column(JSON, nullable=True) # New field for TI data
     created_at = Column(DateTime, default=datetime.datetime.utcnow)
 
     analysis = relationship("Analysis", back_populates="results")
