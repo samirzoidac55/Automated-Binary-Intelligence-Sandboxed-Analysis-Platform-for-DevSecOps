@@ -15,6 +15,12 @@ This platform provides automated binary intelligence and sandboxed analysis for 
 - Static analysis: File type ID, PE/ELF metadata, YARA/capa integration
 - Persistence in PostgreSQL
 
+## Phase 2 Scope (Completed)
+- Threat Intelligence (TI) enrichment for analyzed artifacts.
+- Integration with (mock) TI providers.
+- Asynchronous enrichment pipeline.
+- Database schema extended for TI data.
+
 ## Prerequisites
 - Docker
 - Docker Compose
@@ -23,6 +29,7 @@ This platform provides automated binary intelligence and sandboxed analysis for 
 ```bash
 docker-compose up --build
 ```
+*Note: After services start, run `docker compose exec api alembic upgrade head` to apply database migrations.*
 
 ## How to submit a file
 ```bash
@@ -41,7 +48,6 @@ curl http://localhost:8000/api/v1/analysis/{analysis_id}
 - Non-root containers.
 
 ## Future Phases
-- Phase 2: Threat Intelligence / IOC enrichment
 - Phase 3: Risk engine / security policy
 - Phase 4: Dynamic sandbox
 - Phase 5: Sandbox-detection resistance
