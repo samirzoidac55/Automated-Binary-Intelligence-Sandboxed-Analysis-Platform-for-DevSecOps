@@ -32,9 +32,4 @@ curl -X POST -F "file=@/path/to/executable" http://localhost:8000/api/v1/analyze
 curl http://localhost:8000/api/v1/analysis/{analysis_id}
 ```
 
-## Security Considerations
-- No execution of binaries.
-- No host filesystem mounts.
-- Filesystem isolation via Docker volumes.
-- Non-root containers.
 
