@@ -15,11 +15,6 @@ This platform provides automated binary intelligence and sandboxed analysis for 
 - Static analysis: File type ID, PE/ELF metadata, YARA/capa integration
 - Persistence in PostgreSQL
 
-## Phase 2 Scope (Completed)
-- Threat Intelligence (TI) enrichment for analyzed artifacts.
-- Integration with (mock) TI providers.
-- Asynchronous enrichment pipeline.
-- Database schema extended for TI data.
 
 ## Prerequisites
 - Docker
