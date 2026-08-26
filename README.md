@@ -3,11 +3,7 @@
 ## Objective
 This platform provides automated binary intelligence and sandboxed analysis for DevSecOps workflows by receiving executable artifacts, performing static analysis, and returning structured JSON reports.
 
-## Architecture
-- **API:** FastAPI
-- **Worker:** Celery
-- **Broker:** Redis
-- **Database:** PostgreSQL
+
 
 ## Phase 1 Scope
 - Secure file upload API
