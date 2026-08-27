@@ -12,9 +12,7 @@ This platform provides automated binary intelligence and sandboxed analysis for 
 - Persistence in PostgreSQL
 
 
-## Prerequisites
-- Docker
-- Docker Compose
+
 
 ## How to start with Docker Compose
 ```bash
