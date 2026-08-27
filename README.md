@@ -1,4 +1,5 @@
-# Binary Intelligence Sandboxed Analysis Platform for DevSecOps
+# Binary Intelligence Sandboxed Analysis Platform for DevSecOps pfa intership
+
 
 ## Objective
 This platform provides automated binary intelligence and sandboxed analysis for DevSecOps workflows by receiving executable artifacts, performing static analysis, and returning structured JSON reports.
