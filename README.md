@@ -6,11 +6,6 @@ This platform provides automated binary intelligence and sandboxed analysis for 
 
 
 
-## Phase 1 Scope
-- Secure file upload API
-- Asynchronous task processing
-- Static analysis: File type ID, PE/ELF metadata, YARA/capa integration
-- Persistence in PostgreSQL
 
 
 
