@@ -1,4 +1,4 @@
-# Binary Intelligence Sandboxed Analysis Platform for DevSecOps pfa intership
+# Binary Intelligence Sandboxed Analysis Platform for DevSecOps
 
 
 ## Objective
