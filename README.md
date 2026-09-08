@@ -1,4 +1,4 @@
-# Binary Intelligence Sandboxed Analysis Platform for CI/CD 
+# Binary Intelligence Sandboxed Analysis Platform for CI/CD piplines
 
 
 ## Objective
