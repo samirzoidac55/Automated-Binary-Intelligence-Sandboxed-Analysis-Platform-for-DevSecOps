@@ -1,4 +1,5 @@
-# Binary Intelligence  Analysis Platform for CI/CD 
+# Binary Intelligence  Analysis Platform for CI/CD piplines
+
 
 
 ## Objective
